@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/server.js"],"names":["name","console","log"],"mappings":";;AAAA,MAAMA,OAAO,UAAb;AACAC,QAAQC,GAAR,CAAa,SAAQF,IAAK,EAA1B","file":"server.js","sourcesContent":["const name = 'Jirayuth';\r\nconsole.log(`Hello ${name}`);"]}
