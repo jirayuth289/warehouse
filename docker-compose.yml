@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  mini_warehouse:
+    build: .
+    image: mini_warehouse:dev
+    container_name: mini_warehouse
+    ports:
+      - 8000:8000
+    volumes:
+      - ./src:/mini_warehouse/src

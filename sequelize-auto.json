@@ -1,0 +1,9 @@
+{
+    "host": "localhost",
+    "dialect": "mssql",
+    "directory": false,
+    "port": 1433,
+    "additional": {
+        "timestamps": false
+    }
+}
