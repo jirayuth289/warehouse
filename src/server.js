@@ -2,6 +2,7 @@ import http from 'http';
 import express from 'express';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 
 import routes from './routes';
 import { sequelize } from './models';
@@ -19,6 +20,9 @@ app.use(bodyParser.json());
 
 //parse x-wwww-from-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
+
+//cross-origin resource sharing
+app.use(cors());
 
 //keep log
 app.use((req, res, next) => {
