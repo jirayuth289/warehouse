@@ -16,7 +16,7 @@ class StockItemCtrl {
             }
 
             await models.StockItem.create({ Quantily: quantity, ProductsId: productId, WarehouseId: warehouseId });
-            
+
             res.status(200).json({ success: true, message: 'ok' });
         } catch (error) {
             next(error);
@@ -40,6 +40,22 @@ class StockItemCtrl {
                 });
 
             res.status(200).json({ success: true, stockList });
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    delete = async (req, res, next) => {
+        try {
+            const { productId } = req.query;
+
+            await models.StockItem.destroy({
+                where: {
+                    ProductsId: productId
+                }
+            });
+
+            res.status(200).json({ success: true, message: 'ok' });
         } catch (error) {
             next(error);
         }
